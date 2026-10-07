@@ -1,0 +1,131 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>playboy7323 - Ghostline Bot System</title>
+<meta name="description" content="PLAYBOY7323 Ghostline Bot - Matrix Rain Email Gateway System developed by Johnte. Click bot with offline efficiency, hacker terminal, matrix animation.">
+<meta name="keywords" content="playboy7323, ghostline bot, matrix rain, Johnte, hacker bot, playboy7323 tiiny site, playboy7323 netlify">
+<meta name="author" content="Johnte">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="PLAYBOY7323 - Ghostline Bot System">
+<meta property="og:description" content="Ghostline Bot System with Matrix Rain - Developed by Johnte">
+<meta property="og:url" content="https://playboy7323.netlify.app">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://playboy7323.netlify.app">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#00FF00;font-family:monospace;overflow-x:hidden}
+#matrix{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0}
+.content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 15px}
+header,.card,footer{background:rgba(0,0,0,0.85);border:2px solid #00FF00;border-radius:20px;max-width:680px;width:100%;margin:15px auto;padding:25px;text-align:center;box-shadow:0 0 20px #00FF00}
+.btn{background:#000;color:#00FF00;padding:12px 24px;border-radius:30px;border:2px solid #00FF00;box-shadow:0 0 10px #00FF00;text-decoration:none;display:inline-block;margin:5px;font-weight:bold;cursor:pointer}
+input{width:100%;padding:14px;border:2px solid #00FF00;border-radius:12px;background:#000;color:#00FF00;margin:8px 0}
+#emailGate{position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:999999;display:flex;align-items:center;justify-content:center}
+.gate-box{background:#000;padding:35px 28px;border-radius:25px;border:3px solid #00FF00;box-shadow:0 0 40px #00FF00,0 0 80px #00FF00;animation:glow 1.5s infinite alternate;max-width:430px;width:90%;text-align:center}
+@keyframes glow{from{box-shadow:0 0 20px #00FF00}to{box-shadow:0 0 90px #00FF00,0 0 150px #00FF00}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.bot{width:90px;height:90px;background:#000;border:3px solid #00FF00;border-radius:50%;margin:0 auto 15px;display:flex;align-items:center;justify-content:center;font-size:40px;box-shadow:0 0 30px #00FF00,0 0 60px #00FF00;animation:botFloat 2s infinite alternate}
+@keyframes botFloat{from{transform:translateY(0)}to{transform:translateY(-8px);box-shadow:0 0 50px #00FF00}}
+.ghostline-active{color:#00FF00;text-shadow:0 0 10px #00FF00,0 0 20px #00FF00;border:1px dashed #00FF00;padding:8px 15px;border-radius:20px;display:inline-block;margin-top:10px;animation:moonPulse 1s infinite alternate}
+@keyframes moonPulse{from{opacity:0.7}to{opacity:1;text-shadow:0 0 20px #00FF00,0 0 40px #00FF00}}
+</style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<div id="emailGate">
+  <div class="gate-box">
+    <div style="font-size:35px">👾</div>
+    <h1 style="text-shadow:0 0 20px #00FF00;font-size:30px">PLAYBOY7323</h1>
+    <p style="margin:10px 0;color:#00FF00">> GHOSTLINE BOT GATEWAY_</p>
+    <p style="font-size:11px;color:#00AA00">ENTER EMAIL TO ACTIVATE BOT</p>
+    <input type="email" id="userEmail" placeholder="your@email.com">
+    <button class="btn" style="width:100%;background:#00FF00;color:#000;margin-top:12px" onclick="unlockSite()">ACTIVATE BOT →</button>
+    <div id="errorBox" style="display:none;margin-top:15px;padding:12px;border:2px solid #FF0000;border-radius:12px;background:rgba(255,0,0,0.15);box-shadow:0 0 15px #FF0000;animation:shake 0.3s">
+      <p style="color:#FF0000;font-weight:bold;text-shadow:0 0 10px #FF0000">⚠️ ACCESS DENIED_</p>
+      <p style="color:#FF5555;font-size:12px;margin-top:5px" id="errorText">Invalid email!</p>
+      <button class="btn" style="margin-top:8px;border-color:#FF0000;color:#FF0000;box-shadow:0 0 10px #FF0000;font-size:12px;padding:6px 15px" onclick="closeError()">TRY AGAIN ></button>
+    </div>
+    <div id="grantedBox" style="display:none;margin-top:15px;padding:12px;border:2px solid #00FF00;border-radius:12px;background:rgba(0,255,0,0.15);box-shadow:0 0 20px #00FF00;animation:glow 0.5s infinite alternate">
+      <p style="color:#00FF00;font-weight:bold;text-shadow:0 0 15px #00FF00;font-size:18px">✅ ACCESS GRANTED_</p>
+      <p style="color:#00FF00;font-size:12px;margin-top:5px">Ghostline Bot Activated... Loading System_</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+<header>
+<pre style="font-size:11px;line-height:11px;text-shadow:0 0 10px #00FF00">
+ 011001100110
+  10 0 0 01
+ 01 ^ 10
+ 01 \___/ 01
+   1100110011
+</pre>
+<h1 style="text-shadow:0 0 20px #00FF00">PLAYBOY7323</h1>
+<p>Ghostline Bot | Matrix Rain | Email Gateway</p>
+<p style="font-size:12px;margin-top:5px;color:#888">playboy7323.netlify.app | playboy7323.tiiny.site</p>
+</header>
+
+<div class="card">
+  <div class="bot">🤖</div>
+  <h2>GHOSTLINE BOT</h2>
+  <p style="font-size:50px;color:#00FF00;text-shadow:0 0 20px #00FF00" id="botCount">0</p>
+  <p>Clicks: <span id="clicks">0</span> | Level: <span id="level">1</span></p>
+  <button class="btn" onclick="clickBot()">CLICK BOT +1</button>
+  <button class="btn" onclick="buyBot()">BUY BOT (30 Data)</button>
+  <div class="ghostline-active">🌙 GHOSTLINE: +15% Offline Efficiency ACTIVE</div>
+</div>
+
+<div class="card">
+  <h2>Matrix Status</h2>
+  <p>Rain: <b style="color:#00FF00">ONLINE</b> | Encryption: <b>Ghostline Protocol</b></p>
+  <p style="margin-top:8px;font-size:12px">> 0110011001 SYSTEM SECURE_</p>
+</div>
+
+<div class="card">
+  <h2>QR Code - REAL LINK</h2>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=https://playboy7323.netlify.app" style="width:240px;background:#fff;padding:15px;border-radius:15px;border:3px solid #00FF00;box-shadow:0 0 25px #00FF00">
+  <p style="margin-top:12px;font-weight:bold">playboy7323.netlify.app</p>
+</div>
+
+<footer>
+  PLAYBOY7323<br>
+  Ghostline Bot System<br>
+  © 2026 All Rights Reserved<br>
+  <b style="color:#00FF00;text-shadow:0 0 15px #00FF00">Developed by Johnte</b><br>
+  <span style="font-size:11px;color:#666">Hosted on Permanent Cloud - Netlify</span>
+</footer>
+</div>
+
+<script>
+const c=document.getElementById('matrix'),ctx=c.getContext('2d');function rs(){c.width=innerWidth;c.height=innerHeight}rs();const ch="01PLAYBOY7323GHOSTLINEBOT",fs=18,cols=Math.floor(c.width/fs),drops=new Array(cols).fill(0).map(()=>Math.random()*-50);function dr(){ctx.fillStyle="rgba(0,0,0,0.07)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00FF00";ctx.font="bold "+fs+"px monospace";ctx.shadowBlur=12;ctx.shadowColor="#00FF00";for(let i=0;i<drops.length;i++){ctx.fillText(ch[Math.floor(Math.random()*ch.length)],i*fs,drops[i]*fs);if(drops[i]*fs>c.height&&Math.random()>0.975)drops[i]=0;drops[i]+=0.9}}setInterval(dr,28);window.addEventListener('resize',rs);
+let clicks=parseInt(localStorage.getItem('pb_clicks')||'0');let bots=parseInt(localStorage.getItem('pb_bots')||'0');let data=30;
+function updateUI(){document.getElementById('clicks').innerText=clicks;document.getElementById('botCount').innerText=bots;document.getElementById('level').innerText=Math.floor(clicks/20)+1}
+function clickBot(){clicks++;localStorage.setItem('pb_clicks',clicks);updateUI()}
+function buyBot(){if(data>=30){bots++;data-=30;localStorage.setItem('pb_bots',bots);updateUI();alert('Bot purchased! Ghostline +15% offline active 🌙')}else alert('Need 30 Data')}
+updateUI();setInterval(()=>{if(bots>0){clicks+=Math.floor(bots*0.15+1);localStorage.setItem('pb_clicks',clicks);updateUI()}},3000);
+function unlockSite(){
+  let e=document.getElementById('userEmail').value.trim();
+  let err=document.getElementById('errorBox');
+  let errText=document.getElementById('errorText');
+  let granted=document.getElementById('grantedBox');
+  err.style.display='none';granted.style.display='none';
+  if(e && e.includes('@') && e.includes('.') && e.length > 5){
+    localStorage.setItem('pb_email',e);
+    granted.style.display='block';
+    setTimeout(()=>{document.getElementById('emailGate').style.display='none';},1500);
+  } else {
+    if(!e){errText.innerText="> EMAIL EMPTY! ENTER YOUR EMAIL_";}
+    else if(!e.includes('@')){errText.innerText="> INCOMPLETE! MISSING @ - USE name@gmail.com_";}
+    else if(!e.includes('.')){errText.innerText="> INCOMPLETE! MISSING.com - USE name@gmail.com_";}
+    else {errText.innerText="> INVALID EMAIL! TRY name@gmail.com_";}
+    err.style.display='block';
+  }
+}
+function closeError(){document.getElementById('errorBox').style.display='none';}
+</script>
+</body>
+</html>
